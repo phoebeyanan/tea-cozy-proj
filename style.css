@@ -1,17 +1,18 @@
 /*overall setting*/
 *{
-    background-color:black;
     box-sizing: border-box;
-    color:seashell;
-    opacity:0.9;
+    font-family: Helvetica, Arial, sans-serif;
+    color: seashell;    
+}
+
+body {
+    background-color: black;
+    opacity: 0.9;
 }
 
 /*sizing*/
 
-.container {
-    margin: 0 auto;
-   
-}
+
 
 /*text style*/
 h1,h2,h3,h4,h5,h6,p,figcaption,li,a {
@@ -21,6 +22,18 @@ h1,h2,h3,h4,h5,h6,p,figcaption,li,a {
 
 /*header section*/
 
+.nav-bar {
+    margin: 0 auto;
+    display:flex;
+    min-height:69px;
+    border-bottom: 1px solid seashell;
+    justify-content: space-between;
+    align-items:center;
+    top:0;
+    width:100%;
+    background-color:black;
+}
+
 .header {
     float: right;
     padding: 30px;
@@ -28,9 +41,9 @@ h1,h2,h3,h4,h5,h6,p,figcaption,li,a {
     margin-right: 50px;
 }
 
-.logo img {
+.nav-bar img {
     max-height:50px;
-    margin-bottom:20px;
+    margin-right:10px;
 }
 
 .header a{
@@ -40,7 +53,7 @@ h1,h2,h3,h4,h5,h6,p,figcaption,li,a {
 /*main section*/
 
 main .container{
-    
+    margin-top:69px;
     background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");   
     height:700px;
     max-width:1200px;
@@ -53,39 +66,48 @@ main .container{
     background-size: cover;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
+   
 }
 
-main h2,h4 {
+.container h2,.container h4 {
     text-align: center;
     width: 100%;
     padding: 1%;
     margin:0 auto;
+    background-color:black;
+}
+
+
+.img-galary{
+    max-width: 1200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    margin:80px auto;
 }
 
 .featured-tea {
     margin-top: 30px;
-    vertical-align:center;
+    text-align:center;
+    width:100%;
 }
 .featured-tea-pic {
-    width:100%;
-    max-width:1200px;
     display:flex;
-    flex-direction:row;
     flex-wrap:wrap;
-    justify-content:space-around;
+    justify-content:space-evenly;
     align-items: center;
-    align-content:center;
-    flex: 1 1200px;
+   
 }
 
 main img {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     max-height:200px;
     max-width:300px;
-    display:flex;
     opacity:0.9;
-    
-   
+    margin-bottom:0px;
 }
 
 figcaption {
@@ -94,47 +116,52 @@ figcaption {
 }
 
 
-.locations {
-    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content:center;
-    align-items:center;
-    max-width:1200px;
-    height:500px;
-    background-position: center;
-    text-align:center;
-    flex: 1 1200px;
-}
+
 
 .location-title{
-    margin:30px;
+    display:block;
+    position:relative;
+    top:80px;
+    bottom:15px;
+    margin:0 auto;
     width:auto;
-    background-color:transparent;
+    text-align:center;
+   
+}
+
+.location-title h2{
+    color:seashell;
+    opacity:1;
+    font-weight:800;
 }
 
 
 .addresses {
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    height:500px;
     margin: 0 auto;
-    width:100%;
+    max-width:1200px;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
-    height:30px;
-    background-color:transparent;
-    flex-wrap:wrap;
-    opacity:1;
-    vertical-align:middle;
+    flex-direction:row;
 }
 
-.Downtown, .East-bayside, .Oakdale {
+.Downtown, .East-Bayside, .Oakdale {
     width:300px;
     text-align: center;
+    opacity:1;
+    height:300px;
+    margin: auto 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:black;
 }
 
 .addresses li {
-
-    padding: 30px;
+    padding: 20px;
     display:flex;
     flex-basis:300px; 
     list-style:none;
@@ -145,8 +172,9 @@ figcaption {
 
 
 .addresses h3{
+    padding-top:20px;
     text-align: center;
-    background-color:transparent;
+   
 }
 
 /*footer area*/
@@ -162,4 +190,8 @@ figcaption {
 
 .contact {
     height:200px;
+}
+
+.copyright {
+    margin-right:20px;
 }
